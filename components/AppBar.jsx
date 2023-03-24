@@ -1,15 +1,25 @@
+import Link from "next/link";
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 
 const AppBar = () => {
   return (
     <>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand href="/">Router</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Link href="/">
+            <span className="mx-3 text-light"> Home </span>
+          </Link>
+          <Link href="/about">
+            <span className="mx-3 text-light"> About </span>
+          </Link>
+          <Link href="/product">
+            <span className="mx-3 text-light"> Products </span>
+          </Link>
+          <Link href="/profile">
+            <span className="mx-3 text-light"> Profile </span>
+          </Link>
         </Nav>
       </Navbar>
     </>
