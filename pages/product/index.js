@@ -4,6 +4,7 @@ import React from 'react'
 
 const Products = () => {
   const router = useRouter()
+  console.log(router)
   const handleClick = () => {
     alert('Order placed Successfully')
     router.push('/')
