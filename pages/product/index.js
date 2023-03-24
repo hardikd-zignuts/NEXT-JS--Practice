@@ -1,7 +1,15 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const Products = () => {
+  const router = useRouter()
+  const handleClick = () => {
+    alert('Order placed Successfully')
+    router.push('/')
+    // also use replace to remove history 
+    // router.replace('/')
+  }
   return (
     <div>
       <Link href='/product/1'>
@@ -16,6 +24,8 @@ const Products = () => {
       <Link href='/product/4'>
         <h1>Product 4</h1>
       </Link>
+      <hr />
+      <button onClick={handleClick} className='btn btn-primary'>Buy Products</button>
     </div>
   )
 }
