@@ -6,7 +6,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <AppBar />
-      <Component {...pageProps} />
+      <div className='container mt-5'>
+        <Component {...pageProps} />
+      </div>
     </>
   )
 }
